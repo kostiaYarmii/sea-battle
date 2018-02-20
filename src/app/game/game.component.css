@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+.text-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.text {
+    text-align: center;
+    margin: auto;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+}
+
+td div {
+    background: black;
+    height: 2px;
+    width: 45px;
+}
+
+td div:first-child {
+    transform: rotate(45deg);
+}
+
+td div:last-child {
+    transform: rotate(135deg);
+}

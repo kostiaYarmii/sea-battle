@@ -1,0 +1,20 @@
+<div class="container">
+    <div *ngIf="shootedShips == 10 || firstStart" class="text-container">
+        <span *ngIf="firstStart" class="text">Press any key to start.</span>
+        <span *ngIf="!firstStart" class="text">
+            <span class="fs-25">Congratulations! You win!</span>
+            <br>
+            <span>Press any key to start again.</span>
+        </span>
+    </div>
+    <table [style.opacity]="shootedShips == 10 || firstStart ? '0.1' : ''">
+        <tbody>
+            <tr *ngFor="let row of board">
+                <td *ngFor="let cell of row" [style.background]="cell.ship ? (cell.shooted ? 'red' : 'blue') : ''">
+                    <div *ngIf="cell.shooted"></div>
+                    <div *ngIf="cell.shooted"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
